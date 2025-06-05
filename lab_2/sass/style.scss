@@ -1,0 +1,267 @@
+// Змінні
+$bg-color: #0e1a2b;
+$accent: #4db8ff;
+$text-color: #ffffff;
+$font-stack: 'Segoe UI', sans-serif;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-stack;
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+// Навбар
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 24px 40px; // більший padding
+  background-color: #0a1220; // темніше за $bg-color
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); // сильніше відділення
+  border-bottom: 1px solid #1d2c3b;
+}
+
+// Лівий блок: логотип + назва
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .logo {
+    width: 28px;
+    height: 28px;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin: 0;
+    white-space: nowrap;
+  }
+}
+
+// Центр: інфо про газ і ціну
+.navbar-center {
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+  color: #b0cfff;
+  white-space: nowrap;
+}
+
+.icon-info {
+  background-color: #132842;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+// Навігація
+.navbar-nav {
+  display: flex;
+  gap: 16px;
+
+  a {
+    color: $accent;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px; // додано розмір
+    transition: color 0.2s ease;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.icon-info {
+  font-size: 15px;
+  background-color: #132842;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+.menu-placeholder {
+  font-size: 24px;
+  color: $accent;
+  user-select: none;
+  cursor: default;
+}
+
+
+// Проста іконка меню (без дії)
+.menu-placeholder {
+  font-size: 20px;
+  color: $accent;
+  user-select: none;
+  cursor: default;
+}
+
+// Контент
+main {
+  padding: 30px;
+  flex: 1 0 auto;
+}
+
+.card {
+  background-color: #132842;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+// Таблиці
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  color: $text-color;
+
+  th, td {
+    border: 1px solid #334;
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #1c2f4a;
+    color: $accent;
+  }
+
+  tr:nth-child(even) {
+    background-color: #18273e;
+  }
+}
+
+// Форми
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 5px;
+  background-color: #1b2e45;
+  color: $text-color;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: $accent;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: lighten($accent, 10%);
+}
+
+// Футер
+footer {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #aaa;
+  background-color: #0b1522;
+}
+
+// Секції
+.dark-section {
+  background-color: $bg-color;
+  padding: 40px 0;
+}
+
+
+.section-image {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto 0;
+  border-radius: 10px;
+}
+
+.card h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.card p,
+.card ul li {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.card ul {
+  padding-left: 22px;
+  margin-top: 12px;
+}
+
+.card ul li {
+  margin-bottom: 10px;
+}
+
+.address-img {
+  max-width: 100px;
+  margin: 20px auto 0;
+  display: block;
+  border-radius: 10px;
+}
+
+.contract-img {
+  max-width: 500px;
+  margin: 20px auto 0;
+  display: block;
+  border-radius: 10px;
+}
+
+.navbar-burger {
+  position: relative;
+  .burger-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: $accent;
+  }
+
+  .burger-menu {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    background-color: #132842;
+    border: 1px solid #334;
+    border-radius: 6px;
+    min-width: 160px;
+    display: none;
+    z-index: 100;
+
+    a {
+      display: block;
+      padding: 10px;
+      color: $accent;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #1c2f3a;
+      }
+    }
+  }
+
+  .burger-menu.show {
+    display: block;
+  }
+}

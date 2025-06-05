@@ -1,0 +1,240 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #0e1a2b;
+  color: #ffffff;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 24px 40px;
+  background-color: #0a1220;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #1d2c3b;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navbar-left .logo {
+  width: 28px;
+  height: 28px;
+}
+.navbar-left h1 {
+  font-size: 26px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.navbar-center {
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+  color: #b0cfff;
+  white-space: nowrap;
+}
+
+.icon-info {
+  background-color: #132842;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 16px;
+}
+.navbar-nav a {
+  color: #4db8ff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+.navbar-nav a:hover {
+  text-decoration: underline;
+}
+
+.icon-info {
+  font-size: 15px;
+  background-color: #132842;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+.menu-placeholder {
+  font-size: 24px;
+  color: #4db8ff;
+  user-select: none;
+  cursor: default;
+}
+
+.menu-placeholder {
+  font-size: 20px;
+  color: #4db8ff;
+  user-select: none;
+  cursor: default;
+}
+
+main {
+  padding: 30px;
+  flex: 1 0 auto;
+}
+
+.card {
+  background-color: #132842;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  color: #ffffff;
+}
+table th, table td {
+  border: 1px solid #334;
+  padding: 10px;
+  text-align: left;
+}
+table th {
+  background-color: #1c2f4a;
+  color: #4db8ff;
+}
+table tr:nth-child(even) {
+  background-color: #18273e;
+}
+
+input[type=email],
+input[type=password],
+input[type=text] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 5px;
+  background-color: #1b2e45;
+  color: #ffffff;
+}
+
+button[type=submit] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #4db8ff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type=submit]:hover {
+  background-color: rgb(128, 204.3426966292, 255);
+}
+
+footer {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #aaa;
+  background-color: #0b1522;
+}
+
+.dark-section {
+  background-color: #0e1a2b;
+  padding: 40px 0;
+}
+
+.section-image {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto 0;
+  border-radius: 10px;
+}
+
+.card h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.card p,
+.card ul li {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.card ul {
+  padding-left: 22px;
+  margin-top: 12px;
+}
+
+.card ul li {
+  margin-bottom: 10px;
+}
+
+.address-img {
+  max-width: 100px;
+  margin: 20px auto 0;
+  display: block;
+  border-radius: 10px;
+}
+
+.contract-img {
+  max-width: 500px;
+  margin: 20px auto 0;
+  display: block;
+  border-radius: 10px;
+}
+
+.navbar-burger {
+  position: relative;
+}
+.navbar-burger .burger-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: #4db8ff;
+}
+.navbar-burger .burger-menu {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  background-color: #132842;
+  border: 1px solid #334;
+  border-radius: 6px;
+  min-width: 160px;
+  display: none;
+  z-index: 100;
+}
+.navbar-burger .burger-menu a {
+  display: block;
+  padding: 10px;
+  color: #4db8ff;
+  text-decoration: none;
+}
+.navbar-burger .burger-menu a:hover {
+  background-color: #1c2f3a;
+}
+.navbar-burger .burger-menu.show {
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */

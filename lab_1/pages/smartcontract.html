@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Смартконтракт — Блокчейн Експлорер</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="navbar-left">
+    <img src="../img/eth-logo.svg" alt="ETH Logo" class="logo">
+    <h1>Блокчейн Експлорер</h1>
+  </div>
+
+  <div class="navbar-center">
+    <span class="icon-info">⛽ 24 Gwei</span>
+    <span class="icon-info">$ETH 3423.19</span>
+  </div>
+
+  <nav class="navbar-nav">
+    <a href="index.html">Головна</a>
+    <a href="block.html">Блок</a>
+    <a href="transaction.html">Транзакція</a>
+    <a href="address.html">Адреса</a>
+    <a href="smartcontract.html">Смартконтракт</a>
+  </nav>
+
+  <div class="menu-placeholder">☰</div>
+</header>
+
+<main>
+  <div class="card">
+    <h2>Що таке смартконтракт?</h2>
+    <p>Смартконтракт — це програма, що автоматично виконує умови договору в блокчейні. Вона працює без участі третіх сторін і гарантує прозорість, незмінність і надійність виконання.</p>
+    <p>Смартконтракти використовуються в DeFi, NFT, голосуваннях, токенізації активів, DAO та інших децентралізованих додатках.</p>
+    <img src="../img/smartcontract.png" alt="Smart Contract Diagram" class="section-image contract-img" />
+  </div>
+
+  <div class="card">
+    <h2>Пояснення параметрів</h2>
+    <ul>
+      <li><strong>Адреса контракту:</strong> Унікальна адреса, за якою контракт розгорнуто в мережі.</li>
+      <li><strong>Створено:</strong> Час і хеш транзакції створення контракту.</li>
+      <li><strong>Мова:</strong> Якою мовою написано контракт (наприклад, Solidity).</li>
+      <li><strong>ABI:</strong> Інтерфейс, що описує публічні методи контракту.</li>
+      <li><strong>Вихідний код:</strong> Програмний код контракту, який можна переглянути та перевірити.</li>
+      <li><strong>Статус верифікації:</strong> Чи був контракт верифікований на блокчейн-оглядачі.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Приклад смартконтракту</h2>
+    <table>
+      <tr><th>Параметр</th><th>Значення</th></tr>
+      <tr><td>Адреса</td><td>0x8D12A197cB00D4747a1fe03395095ce2A5CC6819</td></tr>
+      <tr><td>Створено</td><td>2025-04-18 17:22 (Tx: 0xa6c...dbe5)</td></tr>
+      <tr><td>Мова</td><td>Solidity</td></tr>
+      <tr><td>Верифікація</td><td>✅ Підтверджено</td></tr>
+      <tr><td>Методи</td><td>transfer, balanceOf, approve, totalSupply</td></tr>
+    </table>
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 Blockchain Explorer</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Блок — Блокчейн Експлорер</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="navbar-left">
+    <img src="../img/eth-logo.svg" alt="ETH Logo" class="logo">
+    <h1>Блокчейн Експлорер</h1>
+  </div>
+
+  <div class="navbar-center">
+    <span class="icon-info gas-price">⛽ ...</span>
+    <span class="icon-info eth-price">$ETH ...</span>
+  </div>
+
+  <nav class="navbar-nav">
+    <a href="index.html">Головна</a>
+    <a href="block.html">Блок</a>
+    <a href="transaction.html">Транзакція</a>
+    <a href="address.html">Адреса</a>
+    <a href="smartcontract.html">Смартконтракт</a>
+  </nav>
+
+  <div class="navbar-burger">
+    <div class="burger-icon">☰</div>
+    <div class="burger-menu hidden">
+      <a href="user-info.html">👤 Профіль</a>
+      <a href="user-list.html">👥 Користувачі</a>
+      <a href="login.html">🔐 Увійти</a>
+      <a href="logout.html">🚪 Вийти</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero dark-section">
+    <div class="card">
+      <h2>Структура блока</h2>
+      <p>Блок у блокчейні містить не лише список транзакцій, а й детальну службову інформацію. Нижче подано опис кожного поля:</p>
+      <ul>
+        <li><strong>Block Height:</strong> Порядковий номер блока в ланцюгу.</li>
+        <li><strong>Status:</strong> Статус блока (наприклад, підтверджено або в очікуванні).</li>
+        <li><strong>Timestamp:</strong> Час створення блока.</li>
+        <li><strong>Proposed On:</strong> Час, коли блок був запропонований мережею.</li>
+        <li><strong>Transactions:</strong> Кількість підтверджених транзакцій у цьому блоці.</li>
+        <li><strong>Withdrawals:</strong> Виведення коштів (наприклад, зі стейкінгу).</li>
+        <li><strong>Fee Recipient:</strong> Адреса, яка отримала комісійні збори.</li>
+        <li><strong>Block Reward:</strong> Винагорода за добування блока.</li>
+        <li><strong>Total Difficulty:</strong> Сумарна складність для всього ланцюга до цього блока.</li>
+        <li><strong>Size:</strong> Розмір блока в байтах.</li>
+        <li><strong>Gas Used:</strong> Загальна кількість gas, використана у цьому блоці.</li>
+        <li><strong>Gas Limit:</strong> Максимально допустимий обсяг gas для блока.</li>
+        <li><strong>Base Fee Per Gas:</strong> Мінімальна плата за gas для включення в блок.</li>
+        <li><strong>Burnt Fees:</strong> Частина комісії, яка була знищена (спалена).</li>
+        <li><strong>Extra Data:</strong> Додаткові дані, які можна вкласти в блок (необов'язково).</li>
+        <li><strong>Hash:</strong> Унікальний ідентифікатор блока, розрахований хеш-функцією.</li>
+        <li><strong>Parent Hash:</strong> Хеш попереднього блока.</li>
+        <li><strong>StateRoot:</strong> Хеш глобального стану мережі після виконання транзакцій.</li>
+        <li><strong>WithdrawalsRoot:</strong> Хеш дерева виведення коштів.</li>
+        <li><strong>Nonce:</strong> Число, використане для Proof-of-Work або ін. механізмів валідації.</li>
+      </ul>
+      <img src="../img/block.webp" alt="Block structure visual" class="section-image" />
+    </div>
+  </section>
+
+  <section class="dark-section">
+    <div class="card">
+      <h2>Приклад блока</h2>
+      <table>
+        <tr><th>Параметр</th><th>Значення</th></tr>
+        <tr><td>Block Height</td><td>19384723</td></tr>
+        <tr><td>Status</td><td>Confirmed</td></tr>
+        <tr><td>Timestamp</td><td>2025-05-22 01:42:37</td></tr>
+        <tr><td>Proposed On</td><td>2025-05-22 01:42:34</td></tr>
+        <tr><td>Transactions</td><td>174</td></tr>
+        <tr><td>Withdrawals</td><td>5</td></tr>
+        <tr><td>Fee Recipient</td><td>0x4F5b1c3a91Ab...E23d</td></tr>
+        <tr><td>Block Reward</td><td>2.012 ETH</td></tr>
+        <tr><td>Total Difficulty</td><td>58,934,283,002,330,930,332</td></tr>
+        <tr><td>Size</td><td>1054 bytes</td></tr>
+        <tr><td>Gas Used</td><td>14,890,000</td></tr>
+        <tr><td>Gas Limit</td><td>15,000,000</td></tr>
+        <tr><td>Base Fee Per Gas</td><td>23.44 Gwei</td></tr>
+        <tr><td>Burnt Fees</td><td>0.348 ETH</td></tr>
+        <tr><td>Extra Data</td><td>"eth-pool"</td></tr>
+        <tr><td>Hash</td><td>0xa73cb1a4b93c0f74d6e7d1d02c5ac0b3c812378b9b62d8c6fdb4c4aa8eaffb32</td></tr>
+        <tr><td>Parent Hash</td><td>0xa7b8b24e2cfc430679c91e84efcb0632f1a939dcd812f278244b621098e44e32</td></tr>
+        <tr><td>StateRoot</td><td>0x57b1d3f98efb5c43c1c35cf0346c5c3f7dd2a15477e50b4a902df65e18be631f</td></tr>
+        <tr><td>WithdrawalsRoot</td><td>0x9d7cfac9e9a251473289fd03bdfc002f364fd8d3c3dcac52aa93fae943d5c77b</td></tr>
+        <tr><td>Nonce</td><td>0x0000000000000000</td></tr>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Blockchain Explorer</p>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
